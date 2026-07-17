@@ -75,10 +75,7 @@ asciion = True
 
 
 def setup():
-	pass
-
 	global userinput
-
 	global asciion
 
 	if asciion == True:
@@ -105,32 +102,24 @@ def setup():
 
 				getcatgirl()
 
-	if userinput == "play":
-		play()
-	elif userinput == "y":
-		play()
-	elif userinput == "n":
-		sys.exit()
-	elif userinput == "exit":
-		sys.exit()
-	elif userinput == "toggleascii":
-		if asciion == True:
-			print("ASCII art is now toggled OFF)")
-
-			asciion = False
-		else:
-			print("ASCII art is now toggled ON)")
-
-			asciion = True
-	else:
-		print("error")
-
-		sys.exit()
-		return
+	match userinput:
+		case "play" | "y":
+			play()
+		case "exit" | "n":
+			sys.exit()
+		case "toggleascii":
+			if asciion == True:
+				print("ASCII art is now toggled OFF)")
+				asciion = False
+			else:
+				print("ASCII art is now toggled ON)")
+				asciion = True
+		case _:
+			print("error")
+			sys.exit()
+			return
 
 def getnamecolor():
-	pass
-
 	global namecolor
 
 	rng = random.randint(1, 7)
@@ -151,19 +140,14 @@ def getnamecolor():
 		namecolor = CYAN
 
 def getcatgirl():
-	pass
-
 	global userinput
-
 	global meowing
 	global sleepy
 	global screaming
 	global blushing
 	global sneezing
 	global actions
-
 	global result_meowing
-
 	global randomized
 
 	userinput = confirm(f"\ndo you want your {namecolor}catgirl{RESET} to be {YELLOW}meowing?{RESET} [{GREEN}y{RESET}/{RED}n{RESET}]")
@@ -174,16 +158,12 @@ def getcatgirl():
 	else: 
 		if userinput == "_random":
 			print("randomizing")
-
 			randomized = True
 		else:
 			print("error")
-
 			return "error"
 
 	if randomized == False:
-		pass
-
 		userinput = confirm(f"do you want your {namecolor}catgirl{RESET} to be {YELLOW}sleepy?{RESET} [{GREEN}y{RESET}/{RED}n{RESET}]")
 		if userinput == "y":
 			sleepy = True
@@ -191,7 +171,6 @@ def getcatgirl():
 			sleepy = False
 		else:
 			print("error")
-
 			return "error"
 
 		userinput = confirm(f"do you want your {namecolor}catgirl{RESET} to be {YELLOW}screaming?{RESET} [{GREEN}y{RESET}/{RED}n{RESET}]")
@@ -201,7 +180,6 @@ def getcatgirl():
 			screaming = False
 		else:
 			print("error")
-
 			return "error"
 
 		userinput = confirm(f"do you want your {namecolor}catgirl{RESET} to be {YELLOW}blushing?{RESET} [{GREEN}y{RESET}/{RED}n{RESET}]")
@@ -211,7 +189,6 @@ def getcatgirl():
 			blushing = False
 		else:
 			print("error")
-
 			return "error"
 
 		userinput = confirm(f"do you want your {namecolor}catgirl{RESET} to be {YELLOW}sneezing?{RESET} [{GREEN}y{RESET}/{RED}n{RESET}]")
@@ -222,7 +199,6 @@ def getcatgirl():
 			sneezing = False
 		else:
 			print("error")
-
 			return "error"
 
 		userinput = confirm(f"do you want your {namecolor}catgirl{RESET} to do {YELLOW}actions?{RESET} [{GREEN}y{RESET}/{RED}n{RESET}]")
@@ -232,19 +208,14 @@ def getcatgirl():
 			actions = False
 		else:
 			print("error")
-
 			return "error"
 
 		complete()
 		puttogether()
-
 		printcatgirl()
 
 def confirm(prompt = "catgirl generator"):
-	pass
-
 	prompt = f"{prompt} > "
-
 	inputvar = input(prompt)
 
 	if inputvar == "y":
@@ -255,10 +226,7 @@ def confirm(prompt = "catgirl generator"):
 		return inputvar
 
 def meow():
-	pass
-
 	global result_meowing
-
 	global randomized
 
 	if randomized == True and random.randint(1, 2) == 1:
@@ -296,10 +264,7 @@ def meow():
 		result.append(result_meowing)
 
 def sleep():
-	pass
-
 	global result_sleepy
-
 	global randomized
 
 	if randomized == True and random.randint(1, 2) == 1:
@@ -312,16 +277,15 @@ def sleep():
 				elif rng == 2:
 					result_sleepy = f"*starts snoring*"
 			else:
-				rng = random.randint (1, 4)
-
-				elif rng == 1:
-					result_sleepy = f"*passes out* (she's sleepy)"
-				elif rng == 2:
-					result_sleepy = f"*passes out* (she's eepy)"
-				elif rng == 3:
-					result_sleepy = f"*passes out* (she's a sleepy girl)"
-				elif rng == 4:
-					result_sleepy = f"*passes out* (she's an eepy girl)"
+				match random.randint (1, 4):
+					case 1:
+						result_sleepy = f"*passes out* (she's sleepy)"
+					case 2:
+						result_sleepy = f"*passes out* (she's eepy)"
+					case 3:
+						result_sleepy = f"*passes out* (she's a sleepy girl)"
+					case 4:
+						result_sleepy = f"*passes out* (she's an eepy girl)"
 		else:
 			if random.randint(1, 2) == 1:
 				pass
@@ -344,10 +308,7 @@ def sleep():
 		result.append(result_sleepy)
 
 def scream():
-	pass
-
 	global result_screaming
-
 	global randomized
 
 	if randomized == True and random.randint(1, 2) == 1:
@@ -366,10 +327,7 @@ def scream():
 		result.append(result_screaming)
 
 def blush():
-	pass
-
 	global result_blushing
-
 	global randomized
 
 	if randomized == True and random.randint(1, 2) == 1:
@@ -378,15 +336,11 @@ def blush():
 
 			if direction == 1:
 				rng = random.randint(3, 10)
-
 				slashes = "/" * rng
-
 				result_blushing = f">{slashes}<"
 			else:
 				rng = random.randint(3, 10)
-
 				slashes = "\\" * rng
-
 				result_blushing = f">{slashes}<"
 		else:
 			rng = random.randint(1, 2)
@@ -399,24 +353,20 @@ def blush():
 	result.append(result_blushing)
 
 def sneeze():
-	pass
-
 	global result_sneezing
-
 	global randomized
 
 	if randomized == True and random.randint(1, 2) == 1:
 		if random.randint(1, 15) != 15:
-			rng = random.randint(1, 4)
-
-			if rng == 1:
-				result_sneezing = f"*sneezes*"
-			elif rng == 2:
-				result_sneezing = f"*sneezes cutely*"
-			elif rng == 3:
-				result_sneezing = f"*achoo*"
-			elif rng == 4:
-				result_sneezing = f"achoo"
+			match random.randint(1, 4):
+				case 1:
+					result_sneezing = f"*sneezes*"
+				case 2:
+					result_sneezing = f"*sneezes cutely*"
+				case 3:
+					result_sneezing = f"*achoo*"
+				case 4:
+					result_sneezing = f"achoo"
 		else:
 			rng = random.randint(1, 2)
 
@@ -428,65 +378,54 @@ def sneeze():
 		result.append(result_sneezing)
 
 def action():
-	pass
-
 	global result_actions
-
 	global randomized
 
 	if randomized == True and random.randint(1, 2) == 1:
 		if random.randint(1, 14) != 14:
-			pass
-
-			rng = random.randint(1, 13)
-
-			if rng == 1:
-				result_actions = f"*falls*"
-			elif rng == 2:
-				result_actions = f"*sits on your keyboard*"
-			elif rng == 3:
-				result_actions = f"*purrs*"
-			elif rng == 4:
-				result_actions = f"*meows*"
-			elif rng == 5:
-				result_actions = f"*stares at you*"
-			elif rng == 6:
-				result_actions = f"*falls*"
-			elif rng == 7:
-				result_actions = f"*randomly jumps*"
-			elif rng == 8:
-				result_actions = f"*tilts head*"
-			elif rng == 9:
-				result_actions = f"*ear twitches*"
-			elif rng == 10:
-				result_actions = f"*ear twitches slightly*"
-			elif rng == 11:
-				result_actions = f"*tail starts wagging*"
-			elif rng == 12:
-				result_actions = f"*tail wags*"
-			elif rng == 13:
-				result_actions = f"*pounces on you*"
+			match random.randint(1, 13):
+				case 1:
+					result_actions = f"*falls*"
+				case 2:
+					result_actions = f"*sits on your keyboard*"
+				case 3:
+					result_actions = f"*purrs*"
+				case 4:
+					result_actions = f"*meows*"
+				case 5:
+					result_actions = f"*stares at you*"
+				case 6:
+					result_actions = f"*falls*"
+				case 7:
+					result_actions = f"*randomly jumps*"
+				case 8:
+					result_actions = f"*tilts head*"
+				case 9:
+					result_actions = f"*ear twitches*"
+				case 10:
+					result_actions = f"*ear twitches slightly*"
+				case 11:
+					result_actions = f"*tail starts wagging*"
+				case 12:
+					result_actions = f"*tail wags*"
+				case 13:
+					result_actions = f"*pounces on you*"
 		else:
-			rng = random.randint(1, 4)
-
-			if rng == 1:
-				result_actions = f"*starts blabbering*"
-			elif rng == 2:
-				result_actions = f"*starts blabbering about nothing*"
-			elif rng == 3:
-				result_actions = f"*starts blabbering about fish*"
-			elif rng == 4:
-				result_actions = f"*starts blabbering about milk*"
+			match random.randint(1, 4):
+				case 1:
+					result_actions = f"*starts blabbering*"
+				case 2:
+					result_actions = f"*starts blabbering about nothing*"
+				case 3:
+					result_actions = f"*starts blabbering about fish*"
+				case 4:
+					result_actions = f"*starts blabbering about milk*"
 
 			result.append(result_actions)
 	
 def promptname():
-	pass
-
 	global userinput
-
 	global name
-
 	global namecolor
 
 	userinput = input(f"name your {namecolor}catgirl{RESET}: {namecolor}")
@@ -529,10 +468,7 @@ def promptname():
 
 
 def complete():
-	pass
-
 	global userinput
-
 	global meowing
 	global sleepy
 	global screaming
@@ -544,64 +480,49 @@ def complete():
 
 	if meowing == True:
 		meow()
-
 		if random.randint(1, 3) == 3:
 			meow()
-
 			if random.randint(1, 2) == 2:
 				meow()
-
 				if random.randint(1, 5) == 5:
 					meow()
 	if sleepy == True:
 		sleep()
-
 		if random.randint(1, 4) == 4:
 			sleep()
-			
 			if random.randint(1, 3) == 3:
 				sleep()
 	if screaming == True:
 		scream()
-
 		if random.randint(1, 4) == 4:
 			scream()
-			
 			if random.randint(1, 3) == 3:
 				scream()
 	if blushing == True:
 		blush()
-
 		if random.randint(1, 4) == 4:
 			blush()
-			
 			if random.randint(1, 3) == 3:
 				blush()
 	if sneezing == True:
 		sneeze()
-
 		if random.randint(1, 4) == 4:
 			sneeze()
-
 			if random.randint(1, 3) == 3:
 				sneeze()
 	if actions == True:
 		action()
-
 		if random.randint(1, 4) == 4:
 			action()
-
 			if random.randint(1, 3) == 3:
 				action()
 
 	promptname()
-
 	print(f"\n{namecolor}catgirl{RESET} modifying completed")
 
 def randomstuff():
-	pass
-
 	global result
+
 	if random.randint(1, 4) == 4:
 		result.append(":3")
 	if random.randint(1, 4) == 4:
@@ -624,15 +545,12 @@ def randomstuff():
 		result.append("(,,>﹏<,,)")
 
 def puttogether():
-	pass
-
 	global result_meowing
 	global result_sleepy
 	global result_screaming
 	global result_blushing
 	global result_sneezing
 	global result_actions
-
 	global result
 
 	random.shuffle(result)
@@ -641,14 +559,9 @@ def puttogether():
 	result = separator.join(result)
 
 def printcatgirl():
-	pass
-
 	global userinput
-
 	global result
-
 	global name
-
 	global asciion
 
 	print(f"\n{namecolor}{name}{RESET}:")
@@ -665,67 +578,59 @@ def printcatgirl():
 		save()
 
 def geteyecolor():
-	pass
-
 	global eyecolor
 
-	rng = random.randint(1, 12)
-
-	if rng == 1:
-		eyecolor = "blue"
-	elif rng == 2:
-		eyecolor = "green"
-	elif rng == 3:
-		eyecolor = "brown"
-	elif rng == 4:
-		eyecolor = "hazel"
-	elif rng == 5:
-		eyecolor = "gray"
-	elif rng == 6:
-		eyecolor = "yellow"
-	elif rng == 7:
-		eyecolor = "red"
-	elif rng == 8:
-		eyecolor = "pink"
-	elif rng == 9:
-		eyecolor = "purple"
-	elif rng == 10:
-		eyecolor = "black"
-	elif rng == 11:
-		eyecolor = "golden"
-	elif rng == 12:
-		eyecolor = "heterochromia"
+	match random.randint(1, 12):
+		case 1:
+			eyecolor = "blue"
+		case 2:
+			eyecolor = "green"
+		case 3:
+			eyecolor = "brown"
+		case 4:
+			eyecolor = "hazel"
+		case 5:
+			eyecolor = "gray"
+		case 6:
+			eyecolor = "yellow"
+		case 7:
+			eyecolor = "red"
+		case 8:
+			eyecolor = "pink"
+		case 9:
+			eyecolor = "purple"
+		case 10:
+			eyecolor = "black"
+		case 11:
+			eyecolor = "golden"
+		case 12:
+			eyecolor = "heterochromia"
 	
 def gethaircolor():
-	pass
-
 	global haircolor
 
 	if random.randint(1, 30) != 30:
-		rng = random.randint(1, 8)
-
-		if rng == 1:
-			haircolor = "blond"
-		elif rng == 2:
-			haircolor = "brunette"
-		elif rng == 3:
-			haircolor = "black"
-		elif rng == 4:
-			haircolor = "pink"
-		elif rng == 5:
-			haircolor = "red"
-		elif rng == 6:
-			haircolor = "blue"
-		elif rng == 7:
-			haircolor = "purple"
-		elif rng == 8:
-			haircolor = "green"
+		match random.randint(1, 8):
+			case 1:
+				haircolor = "blond"
+			case 2:
+				haircolor = "brunette"
+			case 3:
+				haircolor = "black"
+			case 4:
+				haircolor = "pink"
+			case 5:
+				haircolor = "red"
+			case 6:
+				haircolor = "blue"
+			case 7:
+				haircolor = "purple"
+			case 8:
+				haircolor = "green"
 	else:
 		haircolor = "bald"
 	
 def getinterests():
-	pass
-
 	global interests
 
 	rng = random.randint(1, 16)
@@ -838,9 +743,7 @@ def getinterests():
 	
 def save():
 	global result
-
 	global name
-
 	global interests
 
 	file = open(f"{name}.txt", "x")
@@ -863,7 +766,7 @@ def save():
 
 		separator = ', '
 		interests = separator.join(interests)
-
+		
 		if namecolor == RED:
 			namecolor = "red"
 		elif namecolor == BLUE:
@@ -882,6 +785,7 @@ def save():
 
 def gettime():
 	global timeofbirth
+
 	timeofbirth = datetime.now()
 
 

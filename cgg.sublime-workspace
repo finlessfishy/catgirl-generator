@@ -1,0 +1,447 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ran",
+				"randname"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"load",
+				"loadfonts"
+			],
+			[
+				"get",
+				"gethaircolor"
+			],
+			[
+				"nam",
+				"namecolor"
+			],
+			[
+				"ge",
+				"getcatgirl"
+			],
+			[
+				"in",
+				"interests"
+			],
+			[
+				"AS",
+				"ASCII_CAT"
+			],
+			[
+				"res",
+				"result_meowing"
+			],
+			[
+				"ra",
+				"randomstuff"
+			],
+			[
+				"g",
+				"geteyecolor"
+			],
+			[
+				"e",
+				"eyecolor"
+			],
+			[
+				"pr",
+				"promptname"
+			],
+			[
+				"se",
+				"setup"
+			],
+			[
+				"rand",
+				"randomized"
+			],
+			[
+				"re",
+				"result_screaming"
+			],
+			[
+				"rs",
+				"result_screaming"
+			],
+			[
+				"me",
+				"meowornyaa"
+			],
+			[
+				"sn",
+				"sneezing"
+			],
+			[
+				"d",
+				"div"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"su",
+				"summary"
+			],
+			[
+				"En",
+				"EnableDelayedExpansion"
+			],
+			[
+				"but",
+				"buttonx"
+			],
+			[
+				"bu",
+				"buttontext"
+			],
+			[
+				"m",
+				"menuselection"
+			],
+			[
+				"dr",
+				"drawbutton"
+			],
+			[
+				"sav",
+				"savedata"
+			],
+			[
+				"l",
+				"load"
+			],
+			[
+				"U",
+				"Update"
+			],
+			[
+				"s",
+				"sprite"
+			],
+			[
+				"mon",
+				"moneyperclick"
+			],
+			[
+				"spe",
+				"speedperclick"
+			],
+			[
+				"spr",
+				"sprite"
+			],
+			[
+				"mo",
+				"moneyperclick"
+			],
+			[
+				"fis",
+				"fishspeed"
+			],
+			[
+				"NEW",
+				"newImage"
+			],
+			[
+				"FIS",
+				"fishspeedperclick"
+			],
+			[
+				"fi",
+				"fishspeed"
+			],
+			[
+				"up",
+				"upgradecost"
+			],
+			[
+				"pla",
+				"playbuttonh"
+			],
+			[
+				"pl",
+				"playbuttonh"
+			],
+			[
+				"play",
+				"playbuttonw"
+			],
+			[
+				"f",
+				"fishspeed"
+			],
+			[
+				"buttonh",
+				"buttonheight"
+			],
+			[
+				"b",
+				"buttonwidth"
+			],
+			[
+				"fn",
+				"func"
+			],
+			[
+				"sc",
+				"screenheight"
+			],
+			[
+				"scre",
+				"screenwidth"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"package control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 131.199996948,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/lyric/Documents/GitHub/catgirl-generator"
+	],
+	"file_history":
+	[
+		"/home/lyric/Documents/python/catgirlgenerator/main.py",
+		"/home/lyric/Documents/python/catgirlgenerator/catgirlgenerator.sublime-project",
+		"/C/Users/finle/Downloads/Desktop/fishclickingsimulator/main.lua",
+		"/C/Users/finle/Downloads/Desktop/fishclickingsimulator/conf.lua",
+		"/C/Users/finle/Downloads/Desktop/project/main.lua",
+		"/C/Users/finle/Downloads/Desktop/project/conf.lua",
+		"/C/Users/finle/Documents/python/catgirlgenerator/main.py",
+		"/C/Users/finle/Documents/python/catgirlgenerator/catgirls/test2.txt",
+		"/C/Users/finle/Documents/python/catgirlgenerator/catgirls/test1.txt",
+		"/C/Users/finle/Documents/python/catgirlgenerator/catgirls/yes.txt",
+		"/C/Users/finle/Documents/python/catgirlgenerator/catgirls/hmmm.txt",
+		"/C/Users/finle/Documents/python/catgirlgenerator/catgirls/n.txt",
+		"/C/Users/finle/Documents/python/catgirlgenerator/catgirls/sleepykitty.txt",
+		"/C/Users/finle/Documents/lua/catgenerator/main.lua",
+		"/C/Users/finle/Documents/python/textfss/fss.py",
+		"/C/Users/finle/Documents/python/catgirlgenerator/catgirls/kitty!.txt",
+		"/C/Users/finle/Documents/python/catgirlgenerator/catgirls/all2.txt",
+		"/C/Users/finle/Documents/python/catgirlgenerator/dist/catgirls/all kitty~.txt",
+		"/C/Users/finle/Documents/python/catgirlgenerator/dist/catgirls/eepy.txt",
+		"/C/Users/finle/Documents/python/catgirlgenerator/catgirls/sil.txt",
+		"/C/Users/finle/Documents/python/catgirlgenerator/catgirls/k.txt",
+		"/C/Users/finle/Documents/python/catgirlgenerator/k.txt",
+		"/C/Users/finle/Documents/python/catgirlgenerator/crazy kitty.txt",
+		"/C/Users/finle/Documents/python/catgirlgenerator/silly.txt",
+		"/C/Users/finle/Documents/python/catgirlgenerator/cat.txt",
+		"/C/Users/finle/Documents/python/catgirlgenerator/dist/kitty.txt",
+		"/C/Users/finle/Documents/python/catgirlgenerator/kitty!.txt",
+		"/C/Users/finle/Documents/python/catgirlgenerator/kit.txt",
+		"/C/Users/finle/Documents/python/catgirlgenerator/new kitty.txt",
+		"/C/Users/finle/Documents/python/catgirlgenerator/kitty.txt",
+		"/C/Users/finle/Documents/finlessfishy.github.io/index.html",
+		"/C/Users/finle/Documents/finlessfishy.github.io/games.html",
+		"/C/Users/finle/Documents/finlessfishy.github.io/aboutme.html",
+		"/C/Users/finle/Documents/finlessfishy.github.io/collection.html",
+		"/C/Users/finle/Documents/finlessfishy.github.io/projects.html",
+		"/C/Users/finle/Documents/finlessfishy.github.io/quotes.html",
+		"/C/Users/finle/Documents/finlessfishy.github.io/art/drawings.html",
+		"/C/Users/finle/Documents/finlessfishy.github.io/art/ocs.html",
+		"/C/Users/finle/Documents/finlessfishy.github.io/art/index.html",
+		"/C/Users/finle/Documents/finlessfishy.github.io/art.html",
+		"/C/Users/finle/Documents/python/cli/cli.py",
+		"/C/Users/finle/AppData/Roaming/Sublime Text/Packages/User/View In Browser.sublime-settings",
+		"/C/Users/finle/AppData/Roaming/Sublime Text/Packages/View In Browser/View In Browser.sublime-settings",
+		"/C/Users/finle/Downloads/Desktop/project/code/shaders.lua",
+		"/C/Users/finle/Documents/libresprite/batch.txt",
+		"/C/Users/finle/Downloads/Desktop/open dev stuff.txt",
+		"/C/Users/finle/Documents/batch.txt",
+		"/C/Users/finle/AppData/Roaming/LibreSprite/scripts/bulkexport.lua",
+		"/C/Users/finle/Documents/libresprite/bulkexport.lua",
+		"/C/Users/finle/Downloads/Desktop/LOVE.lnk",
+		"/C/Users/finle/Downloads/Desktop/project/libraries/lume/lume.lua",
+		"/C/Users/finle/Downloads/Desktop/project/code/savedata.lua",
+		"/C/Users/finle/Downloads/Desktop/project/assets/themes/fonts/steelfish rg it.ttf",
+		"/C/Users/finle/Downloads/Desktop/project/code/game.lua",
+		"/C/Users/finle/Downloads/Desktop/project/code/menu.lua",
+		"/C/Users/finle/Documents/lua/main/main.lua",
+		"/C/Users/finle/Documents/python/game1/game1",
+		"/C/Users/finle/Documents/python/testgame1"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"clicked",
+			"YELLOW",
+			"if",
+			"confirm",
+			"():",
+			"confirm",
+			"pass",
+			"actions"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 43.2
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"pinned_build_system": "",
+	"project": "cgg.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 208.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
