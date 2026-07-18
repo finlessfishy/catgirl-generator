@@ -8,9 +8,9 @@ from email.message import EmailMessage
 import smtplib
 import ssl
 
-import cftoolbox as toolbox
-import extra
-from extra import colors as col
+from modules import cftoolbox as toolbox
+from modules import extra
+from modules.extra import colors as col
 
 #os.system("catgirl generator")
 
