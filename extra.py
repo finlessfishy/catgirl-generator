@@ -3,11 +3,6 @@ import sys
 
 
 
-ascii = Ascii_Class()
-colors = Colors_Class()
-
-
-
 class Ascii_Class():
 	def __init__(self):
 		self.CATGIRL = """
@@ -40,3 +35,6 @@ class Colors_Class():
 		self.R = "\033[0m"
 
 
+
+ascii = Ascii_Class()
+colors = Colors_Class()

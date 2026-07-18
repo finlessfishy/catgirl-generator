@@ -1,6 +1,6 @@
-import random
 import sys
 import os
+import random
 from pathlib import Path
 from datetime import datetime
 import email
@@ -8,36 +8,13 @@ from email.message import EmailMessage
 import smtplib
 import ssl
 
-os.system("catgirl generator")
+import cftoolbox as toolbox
+import extra
+from extra import colors as col
+
+#os.system("catgirl generator")
 
 
-
-ASCII_CATGIRL = """
-　　　 　,,
-,＿, -ｰ'"{
-゛ヌ ﾉﾉﾉﾊヾ
-ﾉ li .ﾟ ヮﾟﾉi
-彡と}   .{つ
-"""
-
-ASCII_CAT = """
-
- ╱|、
-(˚ˎ。7  
-|、˜ 〵          
-じ しˍ,)ノ
-"""
-
-RED = "\033[31m"
-GREEN = "\033[32m"
-YELLOW = "\033[0;33m"
-BLUE = "\033[34m"
-RESET = "\033[0m"
-PINK = "\u001b[38;5;212m"
-
-PURPLE = "\033[0;35m"
-WHITE = "\033[0;37m"
-CYAN = "\033[0;36m"
 
 color = ""
 namecolor = ""
@@ -79,12 +56,12 @@ def setup():
 	global asciion
 
 	if asciion == True:
-		print(f"welcome to catgirl generator {ASCII_CAT}")
+		print(f"welcome to catgirl generator {extra.ascii.CAT}")
 	else:
 		print(f"welcome to catgirl generator")
 
-	print(f'\nenter "{GREEN}play{RESET}" to start the game')
-	print(f'enter "{RED}exit{RESET}" to exit the game')
+	print(f'\nenter "{col.GREEN}play{col.RESET}" to start the game')
+	print(f'enter "{col.RED}exit{col.RESET}" to exit the game')
 	print(f'\nenter "toggleascii" to toggle ASCII art on/off')
 
 	userinput = confirm()
@@ -125,19 +102,19 @@ def getnamecolor():
 	rng = random.randint(1, 7)
 
 	if rng == 1:
-		namecolor = RED
+		namecolor = col.RED
 	elif rng == 2:
-		namecolor = BLUE
+		namecolor = col.BLUE
 	elif rng == 3:
-		namecolor = GREEN
+		namecolor = col.GREEN
 	elif rng == 4:
-		namecolor = YELLOW
+		namecolor = col.YELLOW
 	elif rng == 5:
-		namecolor = PURPLE
+		namecolor = col.PURPLE
 	elif rng == 6:
-		namecolor = WHITE
+		namecolor = col.WHITE
 	elif rng == 7:
-		namecolor = CYAN
+		namecolor = col.CYAN
 
 def getcatgirl():
 	global userinput
@@ -149,8 +126,9 @@ def getcatgirl():
 	global actions
 	global result_meowing
 	global randomized
-
-	userinput = confirm(f"\ndo you want your {namecolor}catgirl{RESET} to be {YELLOW}meowing?{RESET} [{GREEN}y{RESET}/{RED}n{RESET}]")
+	randomized = True
+	toolbox.clear()
+	userinput = confirm(f"\ndo you want your {namecolor}catgirl{col.RESET} to be {col.YELLOW}meowing?{col.RESET} [{col.GREEN}y{col.RESET}/{col.RED}n{col.RESET}]")
 	if userinput == "y":
 		meowing = True
 	elif userinput == "n":
@@ -163,8 +141,9 @@ def getcatgirl():
 			print("error")
 			return "error"
 
-	if randomized == False:
-		userinput = confirm(f"do you want your {namecolor}catgirl{RESET} to be {YELLOW}sleepy?{RESET} [{GREEN}y{RESET}/{RED}n{RESET}]")
+	if randomized == True:
+		toolbox.clear()
+		userinput = confirm(f"do you want your {namecolor}catgirl{col.RESET} to be {col.YELLOW}sleepy?{col.RESET} [{col.GREEN}y{col.RESET}/{col.RED}n{col.RESET}]")
 		if userinput == "y":
 			sleepy = True
 		elif userinput == "n":
@@ -173,7 +152,8 @@ def getcatgirl():
 			print("error")
 			return "error"
 
-		userinput = confirm(f"do you want your {namecolor}catgirl{RESET} to be {YELLOW}screaming?{RESET} [{GREEN}y{RESET}/{RED}n{RESET}]")
+		toolbox.clear()
+		userinput = confirm(f"do you want your {namecolor}catgirl{col.RESET} to be {col.YELLOW}screaming?{col.RESET} [{col.GREEN}y{col.RESET}/{col.RED}n{col.RESET}]")
 		if userinput == "y":
 			screaming = True
 		elif userinput == "n":
@@ -182,7 +162,8 @@ def getcatgirl():
 			print("error")
 			return "error"
 
-		userinput = confirm(f"do you want your {namecolor}catgirl{RESET} to be {YELLOW}blushing?{RESET} [{GREEN}y{RESET}/{RED}n{RESET}]")
+		toolbox.clear()
+		userinput = confirm(f"do you want your {namecolor}catgirl{col.RESET} to be {col.YELLOW}blushing?{col.RESET} [{col.GREEN}y{col.RESET}/{col.RED}n{col.RESET}]")
 		if userinput == "y":
 			blushing = True
 		elif userinput == "n":
@@ -191,7 +172,8 @@ def getcatgirl():
 			print("error")
 			return "error"
 
-		userinput = confirm(f"do you want your {namecolor}catgirl{RESET} to be {YELLOW}sneezing?{RESET} [{GREEN}y{RESET}/{RED}n{RESET}]")
+		toolbox.clear()
+		userinput = confirm(f"do you want your {namecolor}catgirl{col.RESET} to be {col.YELLOW}sneezing?{col.RESET} [{col.GREEN}y{col.RESET}/{col.RED}n{col.RESET}]")
 
 		if userinput == "y":
 			sneezing = True
@@ -201,7 +183,8 @@ def getcatgirl():
 			print("error")
 			return "error"
 
-		userinput = confirm(f"do you want your {namecolor}catgirl{RESET} to do {YELLOW}actions?{RESET} [{GREEN}y{RESET}/{RED}n{RESET}]")
+		toolbox.clear()
+		userinput = confirm(f"do you want your {namecolor}catgirl{col.RESET} to do {col.YELLOW}actions?{col.RESET} [{col.GREEN}y{col.RESET}/{col.RED}n{col.RESET}]")
 		if userinput == "y":
 			actions = True
 		elif userinput == "n":
@@ -383,7 +366,7 @@ def action():
 
 	if randomized == True and random.randint(1, 2) == 1:
 		if random.randint(1, 14) != 14:
-			match random.randint(1, 13):
+			match random.randint(1, 18):
 				case 1:
 					result_actions = f"*falls*"
 				case 2:
@@ -410,6 +393,16 @@ def action():
 					result_actions = f"*tail wags*"
 				case 13:
 					result_actions = f"*pounces on you*"
+				case 14:
+					result_actions = f"*bites you*"
+				case 15:
+					result_actions = f"*bites you affectionately*"
+				case 16:
+					result_actions = f"*snuggles you*"
+				case 17:
+					result_actions = f"*hugs you*"
+				case 18:
+					result_actions = f"*cuddles*"
 		else:
 			match random.randint(1, 4):
 				case 1:
@@ -428,12 +421,14 @@ def promptname():
 	global name
 	global namecolor
 
-	userinput = input(f"name your {namecolor}catgirl{RESET}: {namecolor}")
+	toolbox.clear()
+	userinput = input(f"name your {namecolor}catgirl{col.RESET}: {namecolor}")
 
 	if userinput != "_random":
-		print(f'{RESET}you chose {namecolor}{userinput}{RESET}')
+		toolbox.clear()
+		print(f'{col.RESET}you chose {namecolor}{userinput}{col.RESET}')
 
-		confirmvar = confirm(f"are you sure? [{GREEN}y{RESET}/{RED}n{RESET}] ")
+		confirmvar = confirm(f"are you sure? [{col.GREEN}y{col.RESET}/{col.RED}n{col.RESET}] ")
 
 		if confirmvar != None:
 			if confirmvar == "y":
@@ -453,7 +448,7 @@ def promptname():
 			"mommy neko",
 			"skull crusher",
 			"fishstick",
-			"white fluffy",
+			"col.WHITE fluffy",
 			"pecky"
 		]
 
@@ -518,7 +513,6 @@ def complete():
 				action()
 
 	promptname()
-	print(f"\n{namecolor}catgirl{RESET} modifying completed")
 
 def randomstuff():
 	global result
@@ -564,13 +558,15 @@ def printcatgirl():
 	global name
 	global asciion
 
-	print(f"\n{namecolor}{name}{RESET}:")
-	print(f"\n {PINK}{result}{RESET}")
+	toolbox.clear()
+
+	print(f"\n{namecolor}{name}{col.RESET}:")
+	print(f"\n {col.PINK}{result}{col.RESET}")
 
 	if asciion == True:
-		print(ASCII_CATGIRL)
+		print(extra.ascii.CATGIRL)
 
-	print(f'\nenter "save" to save {namecolor}{name}{RESET} as a text file and see some extra info about her')
+	print(f'\nenter "save" to save {namecolor}{name}{col.RESET} as a text file and see some extra info about her')
 
 	userinput = confirm()
 
@@ -582,9 +578,9 @@ def geteyecolor():
 
 	match random.randint(1, 12):
 		case 1:
-			eyecolor = "blue"
+			eyecolor = "col.BLUE"
 		case 2:
-			eyecolor = "green"
+			eyecolor = "col.GREEN"
 		case 3:
 			eyecolor = "brown"
 		case 4:
@@ -592,13 +588,13 @@ def geteyecolor():
 		case 5:
 			eyecolor = "gray"
 		case 6:
-			eyecolor = "yellow"
+			eyecolor = "col.YELLOW"
 		case 7:
-			eyecolor = "red"
+			eyecolor = "col.RED"
 		case 8:
-			eyecolor = "pink"
+			eyecolor = "col.PINK"
 		case 9:
-			eyecolor = "purple"
+			eyecolor = "col.PURPLE"
 		case 10:
 			eyecolor = "black"
 		case 11:
@@ -618,15 +614,15 @@ def gethaircolor():
 			case 3:
 				haircolor = "black"
 			case 4:
-				haircolor = "pink"
+				haircolor = "col.PINK"
 			case 5:
-				haircolor = "red"
+				haircolor = "col.RED"
 			case 6:
-				haircolor = "blue"
+				haircolor = "col.BLUE"
 			case 7:
-				haircolor = "purple"
+				haircolor = "col.PURPLE"
 			case 8:
-				haircolor = "green"
+				haircolor = "col.GREEN"
 	else:
 		haircolor = "bald"
 	
@@ -766,22 +762,22 @@ def save():
 
 		separator = ', '
 		interests = separator.join(interests)
-		
-		if namecolor == RED:
-			namecolor = "red"
-		elif namecolor == BLUE:
-			namecolor = "blue"
-		elif namecolor == GREEN:
-			namecolor = "green"
-		elif namecolor == YELLOW:
-			namecolor = "yellow"
+
+		if namecolor == col.RED:
+			namecolor = "col.RED"
+		elif namecolor == col.BLUE:
+			namecolor = "col.BLUE"
+		elif namecolor == col.GREEN:
+			namecolor = "col.GREEN"
+		elif namecolor == col.YELLOW:
+			namecolor = "col.YELLOW"
 
 		file.write(
 			f"statement:\n\n{result}\n\n\nname: {name}\neye color: {eyecolor}\nhair color: {haircolor}\nname color: {namecolor}\n\ninterests: {interests}\n\n\ntime of creation: {timeofbirth}\n\nmeowing: {meowing}\nsleepy: {sleepy}\nscreaming: {screaming}\nblushing: {blushing}\nsneezing: {sneezing}\nactions: {actions}\n\nstatement length: {len(result)}")
 
 		os.remove(f"{name}.txt")
 
-		print(f'{BLUE}{name}{RESET} has been saved as "{BLUE}{name}{RESET}.txt"')
+		print(f'{col.BLUE}{name}{col.RESET} has been saved as "{col.BLUE}{name}{col.RESET}.txt"')
 
 def gettime():
 	global timeofbirth
@@ -790,4 +786,5 @@ def gettime():
 
 
 if __name__ == "__main__":
+	toolbox.clear()
 	setup()
